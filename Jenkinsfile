@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 //bat 'start gradlew build'
-                bat 'gradle build'
+                bat 'gradlew.bat build'
                 //powershell 'gradle build'
             }
         }
@@ -31,7 +31,7 @@ post {
     always 
     { 
         echo 'Cleaning up workspace' 
-        deleteDir() // Clean up the workspace after the build 
+        // deleteDir() // Clean up the workspace after the build 
     } 
     success { 
         echo 'Build succeeded!!!' // You could add notification steps here 
